@@ -1,0 +1,48 @@
+{
+  "name": "sketch",
+  "version": "1.0.0",
+  "description": "Etch-a-sketch grid",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerna-pedro/sketch.git"
+  },
+  "keywords": [
+    "flexbox",
+    "odin"
+  ],
+  "author": "Pedro Cerna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cerna-pedro/sketch/issues"
+  },
+  "homepage": "https://github.com/cerna-pedro/sketch#readme",
+  "devDependencies": {
+    "@parcel/optimizer-cssnano": "^2.0.0-nightly.587",
+    "@parcel/optimizer-htmlnano": "^2.0.0-nightly.587",
+    "@parcel/packager-css": "^2.0.0-nightly.587",
+    "@parcel/packager-html": "^2.0.0-nightly.587",
+    "@parcel/transformer-css": "^2.0.0-nightly.587",
+    "@parcel/transformer-html": "^2.0.0-nightly.587",
+    "@parcel/transformer-postcss": "^2.0.0-nightly.587",
+    "@parcel/transformer-posthtml": "^2.0.0-nightly.587",
+    "autoprefixer": "^10.2.4",
+    "parcel": "^2.0.0-nightly.585",
+    "postcss": "^8.2.6"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 1%",
+          "last 4 versions",
+          "ie >= 9"
+        ]
+      }
+    }
+  }
+}
