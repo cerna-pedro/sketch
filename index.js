@@ -1,35 +1,35 @@
-const container = document.querySelector('.grid-container')
-const clearButton = document.querySelector('#clear')
+const gridContainer = document.querySelector('.grid-container');
+const gridRow = document.querySelector('.grid-row');
+const clearButton = document.querySelector('#clear');
 
 const clearGrid = () => {
   console.log('cleared');
-}
+  createGrid()
+};
 
-clearButton.addEventListener('pointerdown', clearGrid)
+const wait = (amount = 0) => new Promise(resolve=> setTimeout(resolve, amount))
 
-const createGrid = (num = 16) => {
-  let i = 0
-  while (i < num**2) {
-    // const margin = {
-    //   top: '60px',
-    //   right: '60px',
-    //   bottom: '60px',
-    //   left: '60px'
-    // }
+clearButton.addEventListener('pointerdown', clearGrid);
 
-    const div = document.createElement('div')
-    const heightOfDiv = `min-height:${num}px;background:yellow;max-width:${num}px`
-    div.setAttribute('style',heightOfDiv)
-    // div.setAttribute('style','background:yellow')
-    // div.setAttribute('style',widthOfDiv)
-    div.textContent = 'h';
-    console.dir(div);
-    container.append(div)
-    i++
+const createGrid = async (num = 16) => {
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.firstChild)
 
   }
+  let i = 0;
+  while (i < num) {
+    const gridRow = document.createElement('div')
+    gridRow.classList.add('grid-row')
+    for (let j = 0; j < num; j++) {
+      const div = document.createElement('div');
+      div.classList.add('cell');
+      gridRow.append(div);
+      gridContainer.append(gridRow);
+      await wait(1)
+    }
+    gridContainer.append(gridRow);
+    i++;
+  }
+};
 
-
-}
-
-createGrid()
+createGrid();

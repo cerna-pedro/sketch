@@ -1,4 +1,4 @@
-/*
+
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 
@@ -136,7 +136,7 @@ html {
   height: -webkit-fill-available;
 }
 body {
-  border: 20px solid orange;
+  /* border: 20px solid orange; */
   font-family: 'Lato', sans-serif;
   font-size: 10px;
   color: #333;
@@ -150,12 +150,13 @@ body {
     rgb(109, 255, 243),
     rgb(247, 247, 247),
     rgb(247, 194, 231)
-  );
-  background-size: 400% 400%;
-  animation: Background 30s ease infinite;
-  padding: 1rem;
-}
-.content {
+    );
+    background-size: 400% 400%;
+    animation: Background 20s ease infinite;
+    padding: 1rem;
+  }
+  .content {
+  overflow: hidden;
   font-size: 2.5rem;
   flex: 1;
   display: flex;
@@ -163,17 +164,44 @@ body {
   align-items: center;
 }
 
-
+#clear{
+  width: 150px;
+  padding: .4rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  align-self: center;
+  margin: .8rem 0;
+}
 
 .page-content {
   display: flex;
   flex-direction: column;
   width: 85vw;
   border: 3px solid green;
+  height: 85vh;
 }
 
 .grid-container {
   border: 4px purple solid;
+  display:flex;
+  flex-direction: column;
+  flex: 1;
+  height:50%;
+
+}
+
+.grid-row{
+  display:flex;
+  flex:1;
+}
+
+.cell {
+  /* display: flex; */
+  background-color: white;
+  border:1px solid green;
+  animation: Enter 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* min-height: 50px; */
+  flex:1
 }
 
 .footer {
@@ -214,4 +242,15 @@ body {
   100% {
     background-position: 24% 0%;
   }
-} */
+}
+
+@keyframes Enter {
+  0% {
+    opacity: 0;
+    transform: translateX(800px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
