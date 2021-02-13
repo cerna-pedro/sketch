@@ -1,6 +1,7 @@
+/*
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-/* CSS RESET */
+
 
 html,
 body,
@@ -82,8 +83,7 @@ summary,
 time,
 mark,
 audio,
-video,
-button {
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -93,7 +93,7 @@ button {
   vertical-align: baseline;
   box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -130,7 +130,7 @@ table {
   border-spacing: 0;
 }
 
-/* END CSS RESET */
+
 
 html {
   height: -webkit-fill-available;
@@ -139,7 +139,7 @@ body {
   border: 20px solid orange;
   font-family: 'Lato', sans-serif;
   font-size: 10px;
-  color:#333;
+  color: #333;
   min-height: 100vh;
   min-height: -webkit-fill-available;
   display: flex;
@@ -158,7 +158,24 @@ body {
 .content {
   font-size: 2.5rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  border: 3px solid green;
+}
+
+.grid-container {
+  border: 4px purple solid;
+}
+
 .footer {
   flex: 0;
 }
@@ -197,4 +214,4 @@ body {
   100% {
     background-position: 24% 0%;
   }
-}
+} */
