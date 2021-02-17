@@ -68,7 +68,7 @@ const changeColor = (e) => {
     e.target.style.backgroundColor = `rgba(${match[1]},${match[2]},${match[3]},${a})`;
   }
 };
-const createGrid = async (num = 10) => {
+const createGrid = async (num = 4) => {
   while (gridContainer.firstChild) {
     gridContainer.removeChild(gridContainer.firstChild);
   }
