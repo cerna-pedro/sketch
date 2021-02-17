@@ -2,7 +2,7 @@
   "name": "sketch",
   "version": "1.0.0",
   "description": "Etch-a-sketch grid",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html"
